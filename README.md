@@ -1,71 +1,56 @@
 # 💰 Finance Dashboard UI
 
-A modern, interactive financial dashboard built with **React**, **TypeScript**, and **Tailwind CSS**. This project demonstrates frontend development skills through clean UI design, state management, and responsive user experience.
+A modern, interactive financial dashboard built with **React**, **TypeScript**, and **Tailwind CSS**. This project demonstrates frontend development skills through clean UI, state management, and responsive user experience.
 
----
-
-## 📌 Project Information
-
-- **Submission For:** Zorvyn Assignment Portal - Finance Dashboard UI
-- **Candidate:** Parichay Sahani
-- **Email:** parichayprajapati0029@gmail.com
-- **Status:** ✅ Complete & Fully Functional
+**Submission For:** Zorvyn Assignment Portal | **Candidate:** Parichay Sahani | **Status:** ✅ Complete
 
 ---
 
 ## ✨ Key Features
 
 ### 📊 Dashboard Overview
-- **Summary Cards** - Display Total Balance, Total Income, and Total Expenses with trend indicators
-- **Balance Trend Chart** - Interactive area chart showing balance over time with statistics
+- **Summary Cards** - Display total balance, income, and expenses with trend indicators
+- **Balance Trend Chart** - Interactive area chart showing balance over time
 - **Category Breakdown** - Pie/bar chart visualization of spending by category
-- **Financial Insights** - Highest spending category, monthly comparison, average transaction
+- **Financial Insights** - Highest spending category, monthly comparison, average transactions
 
-### 💳 Transactions Management
+### 💳 Transaction Management
 - **Transaction List** - View all transactions with date, amount, category, type
+- **Add/Edit/Delete** - Full CRUD operations (Admin role only)
 - **Smart Filtering** - Filter by category and transaction type
-- **Dynamic Sorting** - Sort by date, amount, or category (ascending/descending)
+- **Dynamic Sorting** - Sort by date, amount, or category
 - **Real-time Search** - Instantly search through transactions
-- **CRUD Operations** - Add, edit, delete transactions (Admin role)
 
-### 👥 Role-Based Access
+### 👥 Role-Based Access Control
 - **Viewer Role** - Read-only access to dashboard and transactions
 - **Admin Role** - Full CRUD operations on transactions
 - **Role Switcher** - Toggle between roles in the header
 - **Dynamic UI** - Interface updates based on selected role
 
----
-
-## 🛠 Tech Stack
-
-| Technology | Purpose |
-|-----------|---------|
-| **React 19** | UI Framework |
-| **TypeScript** | Type Safety |
-| **Tailwind CSS** | Styling |
-| **Zustand** | State Management |
-| **Recharts** | Data Visualization |
-| **Framer Motion** | Animations |
-| **Lucide React** | Icons |
-| **Date-fns** | Date Formatting |
-| **React Hot Toast** | Notifications |
-| **Vite** | Build Tool |
+### 🎨 User Experience Features
+- ✅ Dark/Light mode toggle with persistence
+- ✅ Data persistence (localStorage)
+- ✅ Smooth animations (Framer Motion)
+- ✅ Export to CSV/JSON
+- ✅ Toast notifications
+- ✅ Form validation with error messages
+- ✅ Empty state messaging
 
 ---
 
-## 📦 Installation & Setup
+## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js 18+ 
+- Node.js 18+
 - npm or yarn
 
-### Steps
+### Installation
 
 ```bash
 # Clone the repository
 git clone https://github.com/Pari100/ZorvynAssignUI.git
 
-# Navigate to project directory
+# Navigate to project
 cd finance_Dashboard
 
 # Install dependencies
@@ -74,8 +59,16 @@ npm install
 # Start development server
 npm run dev
 
-# Open in browser
-# Visit http://localhost:5173/
+# Open http://localhost:5173/
+```
+
+### Available Scripts
+
+```bash
+npm run dev       # Start development server
+npm run build     # Build for production
+npm run preview   # Preview production build
+npm run lint      # Run ESLint
 ```
 
 ---
@@ -85,428 +78,283 @@ npm run dev
 ```
 src/
 ├── components/
-│   ├── common/              # Reusable components
+│   ├── common/                 # Reusable UI components
 │   │   ├── Button.tsx
 │   │   ├── Card.tsx
 │   │   ├── Input.tsx
 │   │   ├── Modal.tsx
-│   │   └── Select.tsx
-│   ├── dashboard/           # Dashboard components
+│   │   ├── Select.tsx
+│   │   └── EmptyState.tsx
+│   ├── dashboard/              # Dashboard feature components
 │   │   ├── SummaryCard.tsx
 │   │   ├── BalanceTrendChart.tsx
 │   │   ├── CategoryChart.tsx
 │   │   └── InsightsPanel.tsx
-│   ├── layout/              # Layout components
+│   ├── layout/                 # Layout & navigation components
 │   │   ├── Header.tsx
 │   │   ├── Sidebar.tsx
 │   │   └── Layout.tsx
-│   └── transactions/        # Transaction components
-│       ├── TransactionList.tsx
-│       ├── TransactionItem.tsx
-│       ├── TransactionForm.tsx
-│       └── TransactionFilters.tsx
-├── store/                   # Zustand state management
-│   └── useStore.ts
-├── hooks/                   # Custom React hooks
-├── utils/                   # Utility functions
-│   ├── formatters.ts
-│   ├── validators.ts
-│   ├── calculations.ts
-│   └── exporters.ts
-├── constants/               # Application constants
-├── types/                   # TypeScript types
-└── App.tsx                  # Main component
-```
-
----
-
-## 🚀 Available Scripts
-
-```bash
-# Development
-npm run dev          # Start development server
-
-# Build
-npm run build        # Build for production
-
-# Preview
-npm run preview      # Preview production build
-
-# Lint
-npm run lint         # Run ESLint
-```
-
----
-
-## 🎨 Design Highlights
-
-- ✅ **Modern UI** - Clean and intuitive design with gradient backgrounds
-- ✅ **Dark Mode** - Full dark mode support with toggle
-- ✅ **Responsive Design** - Works seamlessly from 320px to 2560px
-- ✅ **Smooth Animations** - Framer Motion for engaging transitions
-- ✅ **Color-Coded Elements** - Visual hierarchy with vibrant colors
-- ✅ **Interactive Charts** - Recharts with hover effects
-- ✅ **Empty States** - Helpful messaging when no data available
-
----
-
-## 📝 Usage
-
-### Adding Transactions
-1. Switch to **Admin** role using role switcher
-2. Click **"Add Transaction"** button in transactions section
-3. Fill in transaction details and submit
-
-### Filtering Transactions
-1. Use category filter dropdown
-2. Select transaction type (Income/Expense)
-3. Use search bar for real-time search
-
-### Viewing Analytics
-1. Check **Summary Cards** for quick overview
-2. Analyze **Balance Trend Chart** for financial journey
-3. Review **Category Chart** for spending breakdown
-4. Check **Insights Panel** for key metrics
-
----
-
-## 🔧 Configuration
-
-### Environment Variables
-Currently no environment variables required. All data is stored locally in browser storage.
-
-### Customization
-- Modify colors in `tailwind.config.ts`
-- Update constants in `src/constants/index.ts`
-- Customize transaction categories in mock data
-
----
-
-## 💾 Data Persistence
-
-- All transactions are stored in browser **localStorage**
-- Data persists across browser sessions
-- Export transactions to CSV/JSON for backup
-
----
-
-## 📄 License
-
-This project is created for educational purposes as part of the Zorvyn Assignment Portal.
-
----
-
-## 👤 Author
-
-**Parichay Sahani**  
-📧 parichayprajapati0029@gmail.com  
-🔗 [GitHub Profile](https://github.com/Pari100)
-
----
-
-## 🎯 Future Enhancements
-
-- [ ] Backend API integration
-- [ ] Real user authentication
-- [ ] Advanced reporting features
-- [ ] Budget planning tools
-- [ ] Bill reminders
-- [ ] Multi-currency support
-- [ ] Mobile app version
-
----
-
-**Made with ❤️ for Zorvyn Assignment**
-
-### ✨ Optional Enhancements
-- ✅ Dark mode toggle with persistence
-- ✅ Data persistence (localStorage)
-- ✅ Animations and transitions (Framer Motion)
-- ✅ Export to CSV/JSON
-- ✅ Toast notifications
-- ✅ Advanced filtering
-- ✅ Modal forms
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js 18+ 
-- npm or yarn
-
-### Installation & Running
-
-```bash
-# Navigate to project directory
-cd finance-dashboard
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-
-# Open http://localhost:5173/ in your browser
-```
-
-### Production Build
-
-```bash
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
-```
-
----
-
-## 📁 Project Structure
-
-```
-src/
-├── components/
-│   ├── layout/
-│   │   ├── Header.tsx          # Navigation header
-│   │   └── Layout.tsx          # Main layout wrapper
-│   ├── dashboard/
-│   │   ├── SummaryCard.tsx     # Balance, Income, Expenses cards
-│   │   ├── BalanceTrendChart.tsx # Balance over time
-│   │   ├── CategoryChart.tsx   # Spending by category
-│   │   └── InsightsPanel.tsx   # Financial insights
-│   ├── transactions/
-│   │   ├── TransactionList.tsx # Main transaction table
-│   │   ├── TransactionItem.tsx # Table row component
-│   │   ├── TransactionForm.tsx # Add/Edit form
-│   │   └── TransactionFilters.tsx # Filter controls
-│   ├── common/
-│   │   ├── Button.tsx          # Reusable button
-│   │   ├── Input.tsx           # Form input
-│   │   ├── Select.tsx          # Dropdown
-│   │   ├── Modal.tsx           # Modal dialog
-│   │   ├── Card.tsx            # Container
-│   │   └── EmptyState.tsx      # Empty data state
-│   └── RoleSwitcher.tsx        # Role toggle + theme
+│   ├── transactions/           # Transaction feature components
+│   │   ├── TransactionList.tsx
+│   │   ├── TransactionItem.tsx
+│   │   ├── TransactionForm.tsx
+│   │   └── TransactionFilters.tsx
+│   └── RoleSwitcher.tsx        # Role toggle + theme switcher
 ├── store/
 │   └── useStore.ts             # Zustand state management
 ├── hooks/
-│   └── index.ts                # Custom hooks
+│   └── index.ts                # Custom React hooks
 ├── utils/
-│   ├── calculations.ts         # Financial calculations
-│   ├── formatters.ts           # Data formatting
-│   ├── validators.ts           # Form validation
-│   └── exporters.ts            # CSV/JSON export
+│   ├── calculations.ts         # Financial calculation utilities
+│   ├── formatters.ts           # Data formatting utilities
+│   ├── validators.ts           # Form validation utilities
+│   └── exporters.ts            # CSV/JSON export utilities
 ├── types/
-│   └── index.ts                # TypeScript types
+│   └── index.ts                # TypeScript type definitions
 ├── constants/
-│   └── index.ts                # Constants & mock data
-├── App.tsx                     # Main component
-└── main.tsx                    # Entry point
+│   └── index.ts                # Application constants and mock data
+├── App.tsx                     # Main app component
+└── main.tsx                    # Application entry point
 ```
 
 ---
 
-## 🎯 Key Features
+## 🛠 Tech Stack
 
-### Dashboard
-- Real-time summary cards with animated value updates
-- Interactive line chart showing balance trends
-- Pie/bar chart visualization of spending patterns
-- Financial insights panel with calculated metrics
-
-### Transaction Management
-- Add transactions (Admin only)
-- Edit existing transactions (Admin only)
-- Delete transactions (Admin only)
-- Multi-criteria filtering
-- Flexible sorting options
-- Real-time search
-
-### Role-Based Access
-- **Viewer**: See all data, no editing
-- **Admin**: Full create, read, update, delete capabilities
-- Easy role switching via header toggle
-
-### Data Persistence
-- All transactions saved to browser localStorage
-- Settings and preferences persist across sessions
-- Automatic sync on every data change
-
-### Additional Features
-- Dark/Light mode toggle
-- Export transactions as CSV or JSON
-- Toast notifications for user feedback
-- Responsive design for all screen sizes
-- Form validation with error messages
-- Empty state messages
+| Technology | Purpose |
+|-----------|---------|
+| **React 19** | UI Framework |
+| **TypeScript** | Type Safety |
+| **Tailwind CSS** | Styling & Responsive Design |
+| **Zustand** | State Management |
+| **Recharts** | Data Visualization |
+| **Framer Motion** | Animations & Transitions |
+| **Lucide React** | Icon Library |
+| **Date-fns** | Date Formatting & Manipulation |
+| **React Hot Toast** | Toast Notifications |
+| **Vite** | Build Tool & Dev Server |
 
 ---
 
-## 💻 Technology Stack
+## 🎨 Design Features
 
-| Purpose | Technology |
-|---------|-----------|
-| Framework | React 19.2 + TypeScript |
-| Styling | Tailwind CSS v4 |
-| State Management | Zustand 5 |
-| Charts | Recharts 3.8 |
-| Animations | Framer Motion 12.38 |
-| Icons | Lucide React 1.7 |
-| Build Tool | Vite 8 |
-| Date Utilities | date-fns 4.1 |
-| Notifications | React Hot Toast 2.6 |
+- ✅ **Modern UI** - Clean, intuitive design with gradient effects
+- ✅ **Dark Mode** - Full dark mode support with automatic persistence
+- ✅ **Responsive Design** - Perfectly responsive from 320px to 2560px
+- ✅ **Smooth Animations** - Framer Motion for engaging transitions
+- ✅ **Interactive Charts** - Hover effects and interactive elements
+- ✅ **Empty States** - Helpful messaging when no data available
+- ✅ **Form Validation** - Real-time validation with error messages
+- ✅ **Accessibility** - Semantic HTML and ARIA labels
 
 ---
 
-## 🎨 Design Approach
+## 📖 Usage Guide
 
-### Component Architecture
-- Presentational components for UI display
-- Container components for business logic
-- Reusable common components (Button, Input, Modal)
-- Clear separation of concerns
+### Adding Transactions (Admin Role)
+1. Switch to **Admin** role using the role switcher in header
+2. Click **"Add Transaction"** button
+3. Fill in transaction details:
+   - Date (YYYY-MM-DD format)
+   - Amount (positive number)
+   - Category (dropdown selection)
+   - Type (Income or Expense)
+4. Submit - Dashboard and charts update automatically
 
-### State Management
-- **Transaction Slice**: CRUD operations and data
-- **UI Slice**: Dark mode, role, form visibility
-- **Filter Slice**: Search, filters, sorting
-- Automatic localStorage synchronization
+### Filtering & Searching Transactions
+1. Select a category from the category filter dropdown
+2. Choose transaction type (All/Income/Expense)
+3. Use search bar for real-time search across transactions
+4. Click "Reset Filters" to clear all active filters
+5. Results update instantly as you filter
 
-### Performance
-- Memoized calculations with useMemo
-- Optimized re-renders with selective subscriptions
-- Efficient chart rendering
-- Responsive images and lazy loading
-
-### Responsive Design
-- Mobile-first approach
-- Flexible grid layouts
-- Touch-friendly interfaces
-- Tested on 320px - 2560px widths
-
----
-
-## 📊 Sample Workflow
-
-### Adding a Transaction (Admin Role)
-1. Click "Add Transaction" button
-2. Fill in date, amount, category, and type
-3. Click "Add Transaction" to save
-4. Dashboard and charts update automatically
-5. Data persists in localStorage
-
-### Filtering & Searching
-1. Select category from filter dropdown
-2. Select transaction type (income/expense)
-3. Enter search query in search box
-4. Transactions list updates in real-time
-5. Click "Reset Filters" to clear all
+### Viewing Analytics
+- **Summary Cards** - Quick overview of total balance, income, and expenses
+- **Balance Trend Chart** - Visual representation of financial journey over time
+- **Category Chart** - Breakdown of spending by category
+- **Insights Panel** - Key metrics including highest expense category and averages
 
 ### Switching Roles
-1. Click role toggle in header (Viewer/Admin)
-2. Admin buttons appear/disappear as needed
-3. All data and state persists
+1. Click the role toggle in the header (Viewer/Admin)
+2. Admin-only buttons appear/disappear as needed
+3. All data and state persists when switching
 4. Switch back anytime
 
 ### Dark Mode
-1. Click moon/sun icon in header
-2. Entire app switches to dark theme
-3. Setting persists across sessions
+1. Click the moon/sun icon in the header
+2. Entire app switches to dark/light theme
+3. Setting persists across browser sessions
+
+### Exporting Data
+- Use export button to save transactions as CSV or JSON file
+- Perfect for data backup and external analysis
 
 ---
 
-## 🧪 Testing Recommendations
+## 💾 Data Management
 
-- ✅ Add/edit/delete transactions in Admin mode
-- ✅ Verify Viewer mode hides admin controls
-- ✅ Test all filter combinations
-- ✅ Sort by different fields
-- ✅ Search for existing/non-existent categories
-- ✅ Test on mobile, tablet, desktop
-- ✅ Toggle dark mode
-- ✅ Export data as CSV/JSON
-- ✅ Refresh page - verify data persists
-- ✅ Delete all transactions - verify empty states
+### Data Persistence
+- All transactions stored in browser **localStorage**
+- Data automatically persists across browser sessions
+- Settings (dark mode, role selection) also persist
+- Automatic synchronization on every data change
+
+### Sample Data
+- Application comes with 10 sample transactions
+- Demonstrates various transaction types and categories
+- Clear data anytime by clearing browser localStorage
 
 ---
 
-## 💾 Data & Persistence
+## 🔒 Role-Based Access Control
 
-The app includes 10 sample transactions and uses localStorage for persistence:
+### Viewer Role (Read-Only)
+- ✅ View all dashboard analytics
+- ✅ View all transactions
+- ✅ Apply filters and search
+- ✅ Sort transactions
+- ❌ Cannot add, edit, or delete transactions
 
-```typescript
-interface Transaction {
-  id: string;
-  date: string;        // YYYY-MM-DD format
-  amount: number;
-  category: string;    // Food, Transport, Salary, etc.
-  type: 'income' | 'expense';
-}
+### Admin Role (Full Control)
+- ✅ All Viewer permissions plus:
+- ✅ Add new transactions
+- ✅ Edit existing transactions
+- ✅ Delete transactions
+- ✅ Full data management
+
+---
+
+## 📋 Sample Workflows
+
+### Adding a Transaction
+```
+1. Click "Add Transaction" button
+2. Enter Date, Amount, Category, Type
+3. Click "Add Transaction" to submit
+4. Dashboard updates automatically
+5. Data saved to browser storage
+6. Toast notification confirms success
 ```
 
-Clear browser cache or localStorage to reset to default state.
+### Filtering Transactions
+```
+1. Select category filter dropdown
+2. Select transaction type filter
+3. Enter search query in search box
+4. Results update in real-time
+5. Click "Reset Filters" to clear all
+6. List returns to show all transactions
+```
+
+### Exporting Data
+```
+1. Click export button
+2. Choose format (CSV or JSON)
+3. File automatically downloads
+4. Open in spreadsheet or text editor
+5. Use for backup or external analysis
+```
+
+---
+
+## 🧪 Testing Checklist
+
+- ✅ Add/edit/delete transactions in Admin mode
+- ✅ Verify Viewer mode hides admin buttons
+- ✅ Test all filter combinations
+- ✅ Sort by date, amount, category
+- ✅ Search for existing and non-existent transactions
+- ✅ Test responsiveness on mobile, tablet, desktop
+- ✅ Toggle dark/light mode
+- ✅ Export data as CSV/JSON
+- ✅ Refresh page - verify data persists
+- ✅ Clear cache - verify app resets properly
+- ✅ Switch between roles - verify state consistency
+
+---
+
+## 🏗 Technical Architecture
+
+### Component Design
+- **Presentational Components** - Reusable UI display components (Button, Card, Input)
+- **Container Components** - Business logic & state management (Dashboard, TransactionList)
+- **Layout Components** - Page structure & navigation (Header, Sidebar, Layout)
+- **Feature Components** - Feature-specific components (TransactionForm, CategoryChart)
+
+### State Management with Zustand
+- **Transaction Slice** - All CRUD operations and transaction data
+- **UI Slice** - Dark mode, role selection, modal visibility
+- **Filter Slice** - Search query, sorting, category filters
+- **localStorage Middleware** - Automatic persistence of all state
+
+### Performance Optimizations
+- Memoized calculations with `useMemo`
+- Optimized re-renders with selective subscriptions
+- Efficient chart rendering with Recharts
+- Lazy loading and responsive image handling
+
+### Responsive Design
+- Mobile-first approach using Tailwind CSS
+- Flexible grid layouts that adapt to viewport
+- Touch-friendly interfaces on mobile devices
+- Tested across 320px - 2560px viewport widths
 
 ---
 
 ## 📈 Technical Highlights
 
-✅ **Full TypeScript** with strict mode enabled  
-✅ **State Management** with Zustand and localStorage middleware  
+✅ **Full TypeScript** with strict mode for type safety  
+✅ **React 19** with modern hooks and patterns  
+✅ **Centralized State** with Zustand + localStorage sync  
 ✅ **Component Modularity** with clear separation of concerns  
-✅ **Responsive Design** that works on all devices  
-✅ **Type Safety** with centralized type definitions  
-✅ **Performance** optimized with memoization and lazy loading  
+✅ **Responsive Design** using Tailwind CSS utilities  
+✅ **Type Safety** with comprehensive type definitions  
 ✅ **Accessibility** with semantic HTML and ARIA labels  
 ✅ **Error Handling** with form validation and graceful degradation  
+✅ **Performance** optimized with memoization  
+✅ **Data Visualization** with interactive Recharts
 
 ---
 
-## 🎓 How This Meets Evaluation Criteria
+## 🎯 Evaluation Highlights
 
-| Criteria | Implementation |
-|----------|-----------------|
-| Design & Creativity | Modern UI with thoughtful interactions and animations |
-| Responsiveness | Fully responsive from 320px to 2560px widths |
-| Functionality | All core + optional requirements implemented |
-| User Experience | Intuitive navigation, clear feedback, smooth transitions |
-| Technical Quality | Clean code, modular components, type-safe TypeScript |
-| State Management | Centralized Zustand store with proper organization |
-| Documentation | Comprehensive README with architecture and features |
-| Attention to Detail | Edge cases handled, empty states, form validation |
-
----
-
-## 📝 Summary
-
-This Finance Dashboard demonstrates:
-
-✅ Strong React and TypeScript skills  
-✅ Modern frontend architecture patterns  
-✅ Professional UI/UX design thinking  
-✅ Effective state management  
-✅ Responsive design implementation  
-✅ Full-stack feature development (CRUD, filtering, visualization)  
-✅ Attention to code quality and user experience  
-
-The project shows clear thinking, clean implementation, and professional polish throughout.
+| Aspect | Implementation |
+|--------|-----------------|
+| **Design & UI** | Modern interface with thoughtful user interactions |
+| **Responsiveness** | Perfectly responsive from 320px to 2560px |
+| **Functionality** | All core + optional requirements implemented |
+| **User Experience** | Intuitive navigation with smooth transitions |
+| **Code Quality** | Clean, modular, fully type-safe TypeScript |
+| **State Management** | Well-organized Zustand store with localStorage |
+| **Documentation** | Comprehensive README with clear examples |
+| **Attention to Detail** | Edge cases handled, validation, empty states |
 
 ---
 
-## 📧 Submission Information
+## 🚀 Future Enhancements
 
-**Candidate Name:** Parichay Sahani  
+- [ ] Backend API integration with REST/GraphQL
+- [ ] Real user authentication (OAuth, JWT)
+- [ ] Advanced reporting and analytics
+- [ ] Budget planning and forecasting tools
+- [ ] Bill reminders and notifications
+- [ ] Multi-currency support
+- [ ] Mobile app version (React Native)
+- [ ] Cloud synchronization across devices
+- [ ] Recurring transactions automation
+- [ ] Investment portfolio tracking
+
+---
+
+## 📞 Contact Information
+
+**Candidate:** Parichay Sahani  
 **Email:** parichayprajapati0029@gmail.com  
-**Assignment:** Finance Dashboard UI  
-**Date:** April 6, 2026  
+**GitHub:** [github.com/Pari100](https://github.com/Pari100)  
+**Submission Date:** April 6, 2026  
 
-**Note:** This is an original submission showcasing my approach to frontend development through a complete, functional dashboard application.
+**Note:** This is an original submission showcasing my approach to modern frontend development through a complete, fully functional financial dashboard application built with React and TypeScript.
 
 ---
 
-**© 2026 Zorvyn FinTech Pvt. Ltd. All rights reserved.**
-#   Z o r v y n 
- 
- #   z o r v y n A s s i g n 
- 
- 
+**Made with ❤️ for Zorvyn FinTech | © 2026 All Rights Reserved**
