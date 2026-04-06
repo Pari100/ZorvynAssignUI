@@ -1,15 +1,8 @@
 # 💰 Finance Dashboard UI
 
-A modern, interactive financial dashboard built with **React**, **TypeScript**, and **Tailwind CSS**. This project demonstrates frontend development skills through clean UI design, state management, and responsive user experience.
+A modern, interactive financial dashboard built with **React**, **TypeScript**, and **Tailwind CSS**. This project demonstrates frontend development skills through clean UI, state management, and responsive user experience.
 
----
-
-## 📌 Project Information
-
-- **Submission For:** Zorvyn Assignment Portal - Finance Dashboard UI
-- **Candidate:** Parichay Sahani
-- **Email:** parichayprajapati0029@gmail.com
-- **Status:** ✅ Complete & Fully Functional
+**Submission For:** Zorvyn Assignment Portal | **Candidate:** Parichay Sahani | **Status:** ✅ Complete
 
 ---
 
@@ -36,6 +29,87 @@ A modern, interactive financial dashboard built with **React**, **TypeScript**, 
 
 ---
 
+## � Quick Start
+
+### Prerequisites
+- Node.js 18+
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/Pari100/ZorvynAssignUI.git
+
+# Navigate to project
+cd finance_Dashboard
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Open http://localhost:5173/
+```
+
+### Available Scripts
+
+```bash
+npm run dev       # Start development server
+npm run build     # Build for production
+npm run preview   # Preview production build
+npm run lint      # Run ESLint
+```
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+├── components/
+│   ├── common/              # Reusable components
+│   │   ├── Button.tsx
+│   │   ├── Card.tsx
+│   │   ├── Input.tsx
+│   │   ├── Modal.tsx
+│   │   ├── Select.tsx
+│   │   └── EmptyState.tsx
+│   ├── dashboard/           # Dashboard components
+│   │   ├── SummaryCard.tsx
+│   │   ├── BalanceTrendChart.tsx
+│   │   ├── CategoryChart.tsx
+│   │   └── InsightsPanel.tsx
+│   ├── layout/              # Layout components
+│   │   ├── Header.tsx
+│   │   ├── Sidebar.tsx
+│   │   └── Layout.tsx
+│   ├── transactions/        # Transaction components
+│   │   ├── TransactionList.tsx
+│   │   ├── TransactionItem.tsx
+│   │   ├── TransactionForm.tsx
+│   │   └── TransactionFilters.tsx
+│   └── RoleSwitcher.tsx     # Role toggle + theme
+├── store/
+│   └── useStore.ts          # Zustand state management
+├── hooks/
+│   └── index.ts             # Custom hooks
+├── utils/
+│   ├── calculations.ts      # Financial calculations
+│   ├── formatters.ts        # Data formatting
+│   ├── validators.ts        # Form validation
+│   └── exporters.ts         # CSV/JSON export
+├── types/
+│   └── index.ts             # TypeScript types
+├── constants/
+│   └── index.ts             # Constants & mock data
+├── App.tsx                  # Main component
+└── main.tsx                 # Entry point
+```
+
+---
+
 ## 🛠 Tech Stack
 
 | Technology | Purpose |
@@ -53,100 +127,16 @@ A modern, interactive financial dashboard built with **React**, **TypeScript**, 
 
 ---
 
-## 📦 Installation & Setup
-
-### Prerequisites
-- Node.js 18+ 
-- npm or yarn
-
-### Steps
-
-```bash
-# Clone the repository
-git clone https://github.com/Pari100/ZorvynAssignUI.git
-
-# Navigate to project directory
-cd finance_Dashboard
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-
-# Open in browser
-# Visit http://localhost:5173/
-```
-
----
-
-## 📂 Project Structure
-
-```
-src/
-├── components/
-│   ├── common/              # Reusable components
-│   │   ├── Button.tsx
-│   │   ├── Card.tsx
-│   │   ├── Input.tsx
-│   │   ├── Modal.tsx
-│   │   └── Select.tsx
-│   ├── dashboard/           # Dashboard components
-│   │   ├── SummaryCard.tsx
-│   │   ├── BalanceTrendChart.tsx
-│   │   ├── CategoryChart.tsx
-│   │   └── InsightsPanel.tsx
-│   ├── layout/              # Layout components
-│   │   ├── Header.tsx
-│   │   ├── Sidebar.tsx
-│   │   └── Layout.tsx
-│   └── transactions/        # Transaction components
-│       ├── TransactionList.tsx
-│       ├── TransactionItem.tsx
-│       ├── TransactionForm.tsx
-│       └── TransactionFilters.tsx
-├── store/                   # Zustand state management
-│   └── useStore.ts
-├── hooks/                   # Custom React hooks
-├── utils/                   # Utility functions
-│   ├── formatters.ts
-│   ├── validators.ts
-│   ├── calculations.ts
-│   └── exporters.ts
-├── constants/               # Application constants
-├── types/                   # TypeScript types
-└── App.tsx                  # Main component
-```
-
----
-
-## 🚀 Available Scripts
-
-```bash
-# Development
-npm run dev          # Start development server
-
-# Build
-npm run build        # Build for production
-
-# Preview
-npm run preview      # Preview production build
-
-# Lint
-npm run lint         # Run ESLint
-```
-
----
-
 ## 🎨 Design Highlights
 
-- ✅ **Modern UI** - Clean and intuitive design with gradient backgrounds
+- ✅ **Modern UI** - Clean design with gradient backgrounds
 - ✅ **Dark Mode** - Full dark mode support with toggle
 - ✅ **Responsive Design** - Works seamlessly from 320px to 2560px
-- ✅ **Smooth Animations** - Framer Motion for engaging transitions
-- ✅ **Color-Coded Elements** - Visual hierarchy with vibrant colors
+- ✅ **Smooth Animations** - Framer Motion animations
 - ✅ **Interactive Charts** - Recharts with hover effects
 - ✅ **Empty States** - Helpful messaging when no data available
+- ✅ **Form Validation** - Real-time validation with error messages
+- ✅ **Accessibility** - Semantic HTML and ARIA labels
 
 ---
 
@@ -505,8 +495,4 @@ The project shows clear thinking, clean implementation, and professional polish 
 ---
 
 **© 2026 Zorvyn FinTech Pvt. Ltd. All rights reserved.**
-#   Z o r v y n 
- 
- #   z o r v y n A s s i g n 
- 
- 
+#
