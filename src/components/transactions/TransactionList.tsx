@@ -37,7 +37,7 @@ export const TransactionList = () => {
         <div className="flex items-center justify-between mb-8">
           <div>
             <div className="flex items-center gap-3 mb-2">
-              <div className="p-3 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-xl">
+              <div className="p-3 bg-linear-to-br from-blue-600 to-cyan-600 rounded-xl">
                 <CreditCard size={24} className="text-white" />
               </div>
               <div>

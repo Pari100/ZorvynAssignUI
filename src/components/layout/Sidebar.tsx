@@ -22,7 +22,7 @@ export const Sidebar = () => {
       {/* Logo */}
       <div className="p-6 border-b border-slate-800">
         <div className="flex items-center gap-3">
-          <div className="p-2.5 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg">
+          <div className="p-2.5 bg-linear-to-br from-blue-600 to-indigo-600 rounded-lg">
             <BarChart3 size={24} className="text-white" />
           </div>
           <div>
@@ -80,7 +80,7 @@ export const Sidebar = () => {
 
       {/* Footer / Pro Upgrade */}
       <div className="p-4 border-t border-slate-800">
-        <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl p-4 mb-4">
+        <div className="bg-linear-to-br from-blue-600 to-purple-600 rounded-xl p-4 mb-4">
           <h3 className="font-bold text-sm mb-2">Switch to Pro</h3>
           <p className="text-xs text-slate-200 mb-4">Unlock advanced analytics and more features</p>
           <button className="w-full bg-white text-blue-600 font-semibold py-2 rounded-lg hover:bg-slate-100 transition-colors text-sm">
