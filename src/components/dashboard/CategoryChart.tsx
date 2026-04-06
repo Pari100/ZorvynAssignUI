@@ -1,9 +1,8 @@
-import { PieChart, Pie, Cell, Legend, Tooltip, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid } from 'recharts';
+import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid } from 'recharts';
 import { Card } from '../common/Card';
 import { EmptyState } from '../common/EmptyState';
 import { useCategoryExpenses } from '../../hooks';
 import { formatCurrency, formatPercentage } from '../../utils/formatters';
-import { CHART_COLORS } from '../../constants';
 import { PieChart as PieIcon, BarChart3 } from 'lucide-react';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -100,7 +99,7 @@ export const CategoryChart = () => {
                 cy="50%"
                 outerRadius={110}
                 innerRadius={60}
-                label={({ category, percentage }) => `${category}: ${formatPercentage(percentage)}`}
+                label={(entry: any) => `${entry.category}: ${formatPercentage(entry.percentage)}`}
                 labelLine={true}
               >
                 {data.map((_, index) => (
@@ -117,11 +116,6 @@ export const CategoryChart = () => {
                   padding: '12px 16px',
                   boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.3)',
                 }}
-              />
-              <Legend
-                verticalAlign="bottom"
-                height={36}
-                formatter={(value) => <span className="text-sm font-medium">{value}</span>}
               />
             </PieChart>
           ) : (
